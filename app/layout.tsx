@@ -20,8 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={cn("min-h-screen bg-black font-sans antialiased select-none [cursor:none]", inter.className)}>
-        <TargetCursor />
+      <body className={cn("min-h-screen bg-black font-sans antialiased", inter.className)}>
         {children}
       </body>
     </html>

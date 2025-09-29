@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="border-t border-white/10 py-8">
       <div className="container flex flex-col items-center justify-between gap-4 px-4 md:flex-row">
-        <p className="text-sm text-gray-400">© 2025 Steven Valentino Taslim.</p>
+        <p className="text-sm text-gray-400">© 2025 Steven Valentino Taslim</p>
         <div className="flex items-center gap-4">
           <Link
             href="https://www.linkedin.com/in/bowmanstephen"

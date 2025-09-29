@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-button, a, input, textarea, select, label {
-  cursor: none !important;
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -60,20 +56,6 @@ button, a, input, textarea, select, label {
   body {
     @apply bg-background text-foreground;
   }
-}
-
-@media (max-width: 768px) {
-  .target-cursor-wrapper {
-    display: none !important;
-  }
-
-  body {
-    cursor: auto !important;
-  }
-}
-
-body {
-  cursor: none;
 }
 
 ::-webkit-scrollbar {

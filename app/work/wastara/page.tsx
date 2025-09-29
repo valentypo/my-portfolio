@@ -3,10 +3,11 @@ import { ArrowLeft, ExternalLink } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { Navbar } from "@/app/components/navbar"
+import { Footer } from "@/app/components/footer"
 
-export default function JanssenCaseStudy() {
+export default function WastaraProject() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-[#201E43] text-white">
       <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60">
         <Navbar/>
       </header>
@@ -20,24 +21,20 @@ export default function JanssenCaseStudy() {
         <div className="grid gap-8 md:grid-cols-2 mb-16">
           <div>
             <h1 className="text-5xl font-bold mb-6 leading-tight">
-              TRANSFORMING HEALTHCARE
-              <br />
-              PORTAL EXPERIENCES
-              <br />
-              <span className="text-[#FF3366]">THROUGH UNIFIED DESIGN</span>
+              <span className="text-[#71b0be]">Wastara</span>
             </h1>
 
             <div className="space-y-6 text-gray-300">
               <div>
-                <span className="text-white font-semibold">CLIENT:</span>
-                <span className="ml-2">Janssen Pharmaceuticals (Johnson & Johnson)</span>
+                <span className="text-white font-semibold">Project Type:</span>
+                <span className="ml-2">Self-iniated</span>
               </div>
               <div>
-                <span className="text-white font-semibold">DURATION:</span>
-                <span className="ml-2">2021-2022</span>
+                <span className="text-white font-semibold">Duration:</span>
+                <span className="ml-2">Jul 2025 - Aug 2025</span>
               </div>
               <div>
-                <span className="text-white font-semibold">ROLE:</span>
+                <span className="text-white font-semibold">Role:</span>
                 <span className="ml-2">UX/UI Designer (IBM iX)</span>
               </div>
               <div>
@@ -89,23 +86,23 @@ export default function JanssenCaseStudy() {
           <h2 className="text-3xl font-bold mb-8">KEY ACHIEVEMENTS</h2>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
-              <div className="text-4xl font-bold text-[#FF3366] mb-2">18</div>
+              <div className="text-4xl font-bold text-[#71b0be] mb-2">18</div>
               <p className="text-gray-300">Pharmaceutical brands unified under one design system</p>
             </div>
             <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
-              <div className="text-4xl font-bold text-[#FF3366] mb-2">2000+</div>
+              <div className="text-4xl font-bold text-[#71b0be] mb-2">2000+</div>
               <p className="text-gray-300">Screens redesigned across multiple platforms</p>
             </div>
             <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
-              <div className="text-4xl font-bold text-[#FF3366] mb-2">80%</div>
+              <div className="text-4xl font-bold text-[#71b0be] mb-2">80%</div>
               <p className="text-gray-300">Reduction in UI inconsistencies</p>
             </div>
             <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
-              <div className="text-4xl font-bold text-[#FF3366] mb-2">20%</div>
+              <div className="text-4xl font-bold text-[#71b0be] mb-2">20%</div>
               <p className="text-gray-300">Streamlined development processes</p>
             </div>
             <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
-              <div className="text-4xl font-bold text-[#FF3366] mb-2">100%</div>
+              <div className="text-4xl font-bold text-[#71b0be] mb-2">100%</div>
               <p className="text-gray-300">FDA compliance maintained across all designs</p>
             </div>
           </div>
@@ -129,7 +126,7 @@ export default function JanssenCaseStudy() {
             </Button>
           </Link>
           <Link href="https://www.bowmanstephen.com/work/janssen-pharmaceuticals" target="_blank">
-            <Button className="bg-[#FF3366] text-white hover:bg-[#FF3366]/90">
+            <Button className="bg-[#71b0be] text-white hover:bg-[#71b0be]/90">
               VIEW LIVE CASE STUDY
               <ExternalLink className="ml-2 h-4 w-4" />
             </Button>
@@ -137,16 +134,7 @@ export default function JanssenCaseStudy() {
         </div>
       </main>
 
-      <footer className="border-t border-white/10 py-8 mt-20">
-        <div className="container flex flex-col items-center justify-between gap-4 px-4 md:flex-row">
-          <p className="text-sm text-gray-400">© 2024 STEPHEN BOWMAN. ALL RIGHTS RESERVED.</p>
-          <div className="flex items-center gap-4">
-            <Link href="mailto:bowman.stephen92@gmail.com" className="text-gray-400 hover:text-white text-sm">
-              bowman.stephen92@gmail.com
-            </Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
