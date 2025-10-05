@@ -1,11 +1,15 @@
 import { cn } from "@/lib/utils"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Lora } from "next/font/google"
 import "./globals.css"
 import type React from "react"
-import TargetCursor from "@/app/components/target-cursor"
 
-const inter = Inter({ subsets: ["latin"] })
+const lora = Lora({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-lora",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Steven's Portfolio",
@@ -16,13 +20,13 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={cn("min-h-screen bg-black font-sans antialiased", inter.className)}>
+      <body className={cn("min-h-screen bg-black antialiased", lora.className)}>
         {children}
       </body>
     </html>
-  )
+  );
 }
