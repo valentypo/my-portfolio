@@ -15,7 +15,7 @@ const ScreenshotGallery = ({ images, folderPath = "/" }: ScreenshotGalleryProps)
 
   return (
     <motion.div
-      className="max-w-6xl mx-auto px-6 sm:px-8 md:px-10 lg:px-14 py-20"
+      className="max-w-6xl mx-auto px-6 sm:px-8 md:px-10 lg:px-14 py-12"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}

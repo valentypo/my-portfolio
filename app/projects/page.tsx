@@ -4,8 +4,18 @@ import ProjectCard from "@/app/components/project-card"
 import { Navbar } from "@/app/components/navbar"
 import { Footer } from "@/app/components/footer"
 import { motion } from "framer-motion"
+import { useEffect } from "react"
+import { usePathname, useRouter } from "next/navigation"
+import { projects } from "./data"
 
 export default function ProjectsPage() {
+  const pathname = usePathname()
+  const router = useRouter()
+
+  useEffect(() => {
+    router.refresh()
+  }, [router])
+
   return (
     <div className="min-h-screen bg-[#0f0f0f] text-white">
       <Navbar />
@@ -37,34 +47,23 @@ export default function ProjectsPage() {
         <section className="px-4 py-20">
           <div className="container">
             <div className="grid gap-8 md:grid-cols-2">
-              <ProjectCard
-                title="Wastara"
-                subtitle="Web Development & AI Integration"
-                description="Wastara is a mobile-first web app that lets citizens report trash and helps organizers coordinate cleanups with role-based accounts, location/photo reporting, and AI-assisted pickup optimization."
-                image="/wastara/wastara1.png"
-                link="/projects/wastara"
-              />
-              <ProjectCard
-                title="IRIS"
-                subtitle="Mobile Application & AI-Driven Features"
-                description="IRIS is a Flutter-based mobile app that helps the elderly and visually impaired navigate daily life by using AI for real-time object detection, text recognition, and voice feedback."
-                image="/iris/iris1.png"
-                link="/projects/iris"
-              />
-              <ProjectCard
-                title="Student's Wellbeing Assessment"
-                subtitle="Web Development & Machine Learning"
-                description="A Next.js web app to assess depression in students. We tested multiple models and selected XGBoost for its balance of accuracy and efficiency."
-                image="/students-wellbeing-assessment/students1.png"
-                link="/projects/students-wellbeing-assessment"
-              />
-              <ProjectCard
-                title="IMDB Sentiment Analysis"
-                subtitle="NLP, Machine Learning & Transformers"
-                description="An NLP project that classifies IMDB reviews using both traditional and transformer models, with RoBERTa achieving an F1-score of 89%."
-                image="/imdb-sentiment-analysis/imdb1.png"
-                link="/projects/imdb-sentiment-analysis"
-              />
+              {projects.map((project, index) => (
+              <motion.div
+                key={project.slug}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <ProjectCard
+                  title={project.title}
+                  subtitle={project.subtitle}
+                  description={project.description}
+                  image={project.image}
+                  link={`/projects/${project.slug}`}
+                />
+              </motion.div>
+            ))}
             </div>
           </div>
         </section>

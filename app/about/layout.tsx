@@ -6,9 +6,9 @@ import type React from "react"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "About Me",
+  title: "About Me | Steven's Portfolio",
   description:
-    "Get to know more about me!!",
+    "Get to know more about me!",
 }
 
 export default function ProjectsLayout({ children }: { children: React.ReactNode }) {
